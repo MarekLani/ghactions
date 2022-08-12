@@ -58,9 +58,8 @@ jobs:
     name: 'Terraform'
     runs-on: self-hosted
     environment: production
-    working-directory: tf
     env:
-      TF_VAR_name_prefix: 'ml'
+      TF_VAR_prefix: 'ml'
       ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
@@ -70,6 +69,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: tf
 
     steps:
     # Checkout the repository to the GitHub Actions runner
