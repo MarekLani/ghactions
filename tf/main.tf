@@ -10,8 +10,20 @@ terraform {
       version = "~> 3.1.0"
     }
   }
+  backend "azurerm" {
+  }
 }
 
 provider "azurerm" {
   features {}
+}
+
+ 
+data "azurerm_client_config" "current" {}
+
+ 
+#Create Resource Group
+resource "azurerm_resource_group" "tamops" {
+  name     = "${var.prefix}ghactions"
+  location = "eastus2"
 }
