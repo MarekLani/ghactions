@@ -62,6 +62,7 @@ jobs:
   terraform:
     name: 'Terraform deployment'
     runs-on: self-hosted
+    environment: ${{ inputs.env }}
     env:
       TF_VAR_prefix: ${{ inputs.resource_prefix }}
       ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
