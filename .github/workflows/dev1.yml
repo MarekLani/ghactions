@@ -52,10 +52,9 @@ on:
 
 jobs:
   deploy-test-infra:
-    runs-on: self-hosted
-    environment: production
     uses: ./.github/workflows/terraform.yml
     with:
       config_name: 'backend-dev.hcl'
       resource_prefix: 'prefix'
+      env: 'production'
     secrets: inherit
