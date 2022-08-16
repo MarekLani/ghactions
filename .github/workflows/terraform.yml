@@ -53,6 +53,9 @@ on:
       config_name:
         required: true
         type: string
+      env:
+        required: true
+        type: string
 
 
 permissions:
