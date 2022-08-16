@@ -42,7 +42,7 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Deploy Test Infra'
+name: 'Deploy-Test-Infra'
 
 on:
   push:
