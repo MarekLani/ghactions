@@ -55,6 +55,6 @@ jobs:
     uses: ./.github/workflows/terraform.yml
     with:
       config_name: 'backend-dev.hcl'
-      resource_prefix: 'prefix2'
+      resource_prefix: 'prefix_2'
       env: 'production'
     secrets: inherit
