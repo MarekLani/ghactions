@@ -11,6 +11,7 @@ terraform {
     }
   }
   backend "azurerm" {
+    use_oidc = true
   }
 }
 provider "azurerm" {
