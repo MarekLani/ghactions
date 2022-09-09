@@ -64,7 +64,7 @@ permissions:
 jobs:
   terraform:
     name: 'Terraform deployment'
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     environment: ${{ inputs.env }}
     env:
       TF_VAR_prefix: ${{ inputs.resource_prefix }}
