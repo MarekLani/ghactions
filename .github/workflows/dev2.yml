@@ -42,7 +42,7 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Deploy-Test-Infra2'
+name: 'Deploy-Test-Infra-2'
 
 on:
   workflow_run:
@@ -54,7 +54,7 @@ jobs:
   deploy-test-infra:
     uses: ./.github/workflows/terraform.yml
     with:
-      config_name: 'backend-dev.hcl'
-      resource_prefix: 'prefix_2'
+      config_name: 'backend-prod.hcl'
+      resource_prefix: 'prod'
       env: 'production'
     secrets: inherit
